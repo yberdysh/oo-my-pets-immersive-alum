@@ -1,6 +1,9 @@
+require 'pry'
+
 class Owner
   # code goes here
-  attr_reader :species
+  attr_reader :species, :name
+  attr_writer :name
   @@all = []
   def self.all
   	@@all
@@ -24,7 +27,24 @@ class Owner
   	return "I am a #{@species}."
   end
 
-  def name
+  def pets
+  	{
+  		fishes: [],
+  		dogs: [],
+  		cats: []
+  	}
+  end
+
+  def buy_fish(fish)
+  	new_fish = Fish.new(fish)
+  	self.pets[:fishes] << new_fish
+  end
+
+  def buy_cat
+  	
+  end
+
+  def buy_dog
   	
   end
 
