@@ -17,7 +17,15 @@ class Owner
 
   def initialize(species)
   	@species = species
-  	@@all << species
+  	@@all << self
+  end
+
+  def say_species
+  	return "I am a #{@species}."
+  end
+
+  def name
+  	
   end
 
 end
